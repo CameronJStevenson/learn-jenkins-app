@@ -1,0 +1,15 @@
+pipeline {
+  agent none // Define agent as none at the top level
+  stages {
+    stage('Build') {
+      agent any // Define agent for this stage
+      steps {
+        sh ''' 
+        
+        echo "Hello there!!!"
+        '''
+      }
+    }
+
+  }
+}
