@@ -8,6 +8,7 @@ pipeline {
           reuseNode true
         }
       } // Define agent for this stage
+      //Adding an extra comment to update.
       steps {
 
         sh ''' 
@@ -15,7 +16,9 @@ pipeline {
         ls -la
         node --version
         npm --version
-        echo "Hello there!!!"
+        npm ci
+        ls -la
+        npm run build
         '''
       }
     }
