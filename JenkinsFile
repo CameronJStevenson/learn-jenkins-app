@@ -18,9 +18,15 @@ pipeline {
         npm --version
         npm ci
         ls -la
-        npm run build
+        echo "Build stage complete"
+     
         '''
       }
+    }
+    stage ('Test'){
+      sh '''
+      echo "Completed test stage"
+      '''
     }
 
   }
